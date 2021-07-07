@@ -7,14 +7,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet" type='text/css'>
   <title>Cellular Automata</title>
+  
   <style>
-    h1 { font-family: 'Chivo', sans-serif; }
-    p { font-family: 'Chivo', sans-serif; }
+    h1,p,ol { font-family: 'Chivo', sans-serif; }
     .float-child {
       width: 50%;
       float: left;
     }  
+
+    .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .types {
+
+    }
   </style>
+ 
   <script src="p5.js"></script>
   <!-- <script src="../addons/p5.sound.js"></script> -->
   <script src="sketch.js"></script>
@@ -28,7 +39,39 @@
         <p>The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, 
         each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively).
          Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or 
-         diagonally adjacent. </p>
+         diagonally adjacent. The cell have set ruler:</p>
+        
+        <ol>
+          <li>Any live cell with fewer than 2 live neighbours dies, as if by underpopulation</li>
+          <li>Any live cell with 2 or 3 live neighbours lives on to the next generation</li>
+          <li>Any live cell with more than 3 live neighbours dies, as if by overpopulation</li>
+          <li>Any dead cell with exactly 3 live neighbours becomes a live cell, as if by reproduction</li>
+        </ol>
+        <h3>Recurring patterns</h3>
+        <div class="main">
+          <div class="types">
+            <p>Block</p>
+            <img src="../Test/images/Block.png">
+            <p>Bee Hive</p>
+            <img src="../Test/images/Beehive.png">
+            <p>Boat</p>
+            <img src="../Test/images/Boat.png">
+            <p>Tub</p>
+            <img src="../Test/images/Tub.png">
+          </div>
+          <div class="types">
+            <p>Blinker</p>
+            <img src="../Test/images/Blinker.gif">
+            <p>Beacon</p>
+            <img src="../Test/images/Beacon.gif">
+            <p>Toad</p>
+            <img src="../Test/images/Toad.gif">
+          </div>
+          <div class="types">
+            <p>Glider</p>
+            <img src="../Test/images/Glider.gif">
+          </div>
+        </div> 
       </div>
       <div id="canvasForHTML" class="float-child">
       </div>

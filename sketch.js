@@ -12,7 +12,7 @@ let rows;
 let resolution = 10;
 let next;
 let count;
-let length = 500;
+let length = 600;
 function setup() {
   var canvas = createCanvas(length, length);
   canvas.parent('canvasForHTML');
@@ -27,15 +27,18 @@ function setup() {
   console.table(grid);
 }
 
+function dummy() {
+}
+
 function draw() {
-  background(0);
+  background(255);
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
       let x = i * resolution;
       let y = j * resolution;
       if (grid[i][j] == 1) {
         noStroke();
-        fill(255);
+        fill(0);
         //stroke(0);
         rect(x, y, resolution - 1, resolution - 1);
       }
@@ -66,6 +69,7 @@ rect(0, length-20,length,resolution*2)
 
     }
   }
+  setInterval(dummy, 1000);
   //console.log(next)
   grid = next;
 }
