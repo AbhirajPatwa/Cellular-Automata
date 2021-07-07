@@ -10,6 +10,10 @@
   <style>
     h1 { font-family: 'Chivo', sans-serif; }
     p { font-family: 'Chivo', sans-serif; }
+    .float-child {
+      width: 50%;
+      float: left;
+    }  
   </style>
   <script src="p5.js"></script>
   <!-- <script src="../addons/p5.sound.js"></script> -->
@@ -18,8 +22,17 @@
 
 <body>
   <main>
-    <h1>Cellular Automata</h1>
-    <p>The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. </p>
+    <div class="float-container">
+      <div class="float-child">
+        <h1>Cellular Automata</h1>
+        <p>The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, 
+        each of which is in one of two possible states, live or dead, (or populated and unpopulated, respectively).
+         Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or 
+         diagonally adjacent. </p>
+      </div>
+      <div id="canvasForHTML" class="float-child">
+      </div>
+    </div>
   </main>
 </body>
 

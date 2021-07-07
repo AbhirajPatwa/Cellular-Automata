@@ -14,7 +14,8 @@ let next;
 let count;
 let length = 500;
 function setup() {
-  createCanvas(length, length);
+  var canvas = createCanvas(length, length);
+  canvas.parent('canvasForHTML');
   cols = width / resolution;
   rows = height / resolution;
   grid = arr2d(cols, rows);
